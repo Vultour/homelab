@@ -1,0 +1,19 @@
+$ORIGIN .
+$TTL 300
+local        IN     SOA     dns.local.     root.labrt.local. (
+                    2016101201 ; serial
+                    300        ; refresh after 6 hours
+                    300        ; retry after 1 hour
+                    3600       ; expire after 1 week
+                    300        ; minimum TTL of 1 day
+)
+
+$ORIGIN local.
+             IN     NS      dns.local.
+
+
+labrt        IN     A       192.168.0.1
+dns          IN     A       192.168.0.1
+
+puppet       IN     CNAME   labrt
+foreman      IN     CNAME   labrt

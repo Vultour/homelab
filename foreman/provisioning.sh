@@ -35,3 +35,7 @@ echo "/opt/virt/os/centos7.iso /opt/virt/os/mnt/centos-7 iso9660 ro,fscontext=un
 
 # Mount all
 mount -a
+
+
+systemctl restart foreman
+systemctl restart httpd

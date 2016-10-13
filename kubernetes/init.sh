@@ -19,9 +19,10 @@ EOF
 
 setenforce 0
 
-yum install -y kubelet kubeadm kubectl kubernetes-cni
+yum install -y docker kubelet kubeadm kubectl kubernetes-cni
 
-systemctl restart docker
+systemctl enable docker
+systemctl start docker
 
 systemctl enable kubelet
 systemctl start kubelet
